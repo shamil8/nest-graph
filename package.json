@@ -1,10 +1,10 @@
 {
   "name": "nest-graph",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Nest JS with The Graph",
+  "author": "Shamil Qurbonov <qurbonovshamil@gmail.com>",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
@@ -24,6 +24,7 @@
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",
+    "@nestjs/swagger": "^6.0.1",
     "@nestjs/typeorm": "^9.0.0",
     "dotenv": "^16.0.1",
     "pg": "^8.7.3",

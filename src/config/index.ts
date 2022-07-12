@@ -12,7 +12,7 @@ export default {
   server: {
     baseUrl: process.env.BASE_URL,
     routePrefix: process.env.ROUTE_PREFIX,
-    port: process.env.SERVER_PORT ? Number(process.env.SERVER_PORT) : 3000,
+    port: process.env.SERVER_PORT ? Number(process.env.SERVER_PORT) : 5000,
     cors: {
       origin: '*',
       methods: ['GET', 'POST', 'PUT', 'DELETE'],

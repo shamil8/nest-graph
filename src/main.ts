@@ -1,5 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { SwaggerModule } from '@nestjs/swagger';
+import helmet from 'helmet';
 import config from './config';
 import swagger from './config/swagger.config';
 import { AppModule } from './app.module';
@@ -20,9 +21,7 @@ async function main() {
   // const responseInterceptor = new ResponseInterceptor();
   // app.useGlobalInterceptors(responseInterceptor);
   //
-  // app.connectMicroservice({
-  //   ...rabbit,
-  // });
+  // app.connectMicroservice(rabbit);
 
   /** Settings Swagger */
   const document = SwaggerModule.createDocument(app, swagger, {
@@ -36,8 +35,8 @@ async function main() {
   );
 
   app.enableCors(config.server.cors);
-  // app.use(helmet());
-  //
+  app.use(helmet());
+
   // await app.startAllMicroservices();
   await app.listen(config.server.port);
 }
